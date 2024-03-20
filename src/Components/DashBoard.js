@@ -1,14 +1,14 @@
 import { Button, Flex } from "antd";
 import React from "react";
 
-const ButtonComponent = ()=>{
+const DashBoard = ()=>{
     return(
         <>
             <Flex>
-                <Button></Button>
+                <Button>DashBoard</Button>
             </Flex>
         </>
     )
 } 
 
-export default ButtonComponent;
+export default DashBoard;

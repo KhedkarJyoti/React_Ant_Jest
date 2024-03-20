@@ -5,8 +5,36 @@ import { useState } from 'react';
 import { calculateNewValue } from '@testing-library/user-event/dist/utils';
 import { MenuFoldOutlined, MenuUnfoldOutlined } from '@ant-design/icons';
 import Sider from "antd/es/layout/Sider";
+import { Link, useNavigate } from "react-router-dom";
+
+
+const Home = () => {
+    return (
+      <div>
+        <h1>Home Page</h1>
+      </div>
+    );
+  };
+  
+  const User = () => {
+    return (
+      <div>
+        <h1>User Page</h1>
+      </div>
+    );
+  };
+  
+  const Settings = () => {
+    return (
+      <div>
+        <h1>Settings Page</h1>
+      </div>
+    );
+  };
+
 const Sidebar = ()=>{
-    const [collapsed, setCollapsed] = useState(false)
+    const [collapsed, setCollapsed] = useState(false);
+    const navigate = useNavigate();
     return(
         <>
             {/* <Flex>
@@ -35,6 +63,11 @@ const Sidebar = ()=>{
                         mode="inline" 
                         defaultSelectedKeys={['Logo','1']}  
                         className='menu-bar'
+                        onClick={({key})=>{
+                            console.log("key => ",key);
+                            navigate(key);
+
+                        }}
                         items={[
                             {
                                 key : 'Logo',
@@ -43,34 +76,34 @@ const Sidebar = ()=>{
                                 onClick: () => setCollapsed(!collapsed)
                             },
                             {
-                                key : '1',
+                                key : '/dashboard',
                                 icon: <DashboardOutlined />,
-                                label: 'Dashboard'                                
+                                label: 'Dashboard',             
                             },
                             {
-                                key : '2',
+                                key : 'component',
                                 icon: <OrderedListOutlined />,
                                 label: 'Components',
                                 children: [
                                     {
-                                        key : '21',
+                                        key : '/general',
                                         icon: <RightSquareOutlined />,
                                         label: 'General',
                                         children: [
                                             {
-                                                key : '211',
+                                                key : '/button',
                                                 icon: <RightCircleOutlined />,
-                                                label: 'Button',
+                                                label: 'Button'
                                             },
                                             {
-                                                key : '212',
+                                                key : '/float-button',
                                                 icon: <RightCircleOutlined />,
                                                 label: 'FloatButton',
                                             }
                                         ]
                                     },
                                     {
-                                        key : '22',
+                                        key : '/navigation',
                                         icon: <RightSquareOutlined />,
                                         label: 'Navigation',
                                     }
@@ -82,17 +115,17 @@ const Sidebar = ()=>{
                             //     label: 'ToDo'
                             // },
                             {
-                                key : '4',
+                                key : '/profile',
                                 icon: <UserOutlined />,
                                 label: 'Profile'
                             },
                             {
-                                key : '5',
+                                key : '/settings',
                                 icon: <SettingOutlined />,
                                 label: 'Settings'
                             },
                             {
-                                key : '6',
+                                key : '/logout',
                                 icon: <LogoutOutlined />,
                                 label: 'Logout'
                             },
