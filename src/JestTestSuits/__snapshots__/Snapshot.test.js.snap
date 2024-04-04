@@ -1,0 +1,16 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should take a snapshot 1`] = `
+<DocumentFragment>
+  <div
+    class="ant-flex css-dev-only-do-not-override-1ae8k9u ant-flex-align-center ant-flex-vertical"
+    style="gap: 30px;"
+  >
+    <div
+      style="padding: 100px; background: aliceblue;"
+    >
+      Hello Snapshot...
+    </div>
+  </div>
+</DocumentFragment>
+`;

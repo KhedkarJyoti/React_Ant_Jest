@@ -4,8 +4,8 @@ import React from "react";
 const DashBoard = ()=>{
     return(
         <>
-            <Flex>
-                <Button>DashBoard</Button>
+            <Flex align="center" justify="center" style={{height:450, background:'aliceblue'}}>
+                 <Button>Dashboard Content...</Button>
             </Flex>
         </>
     )

@@ -1,11 +1,11 @@
-import { Button, Flex, Menu, Typography } from "antd";
-import { CarryOutOutlined, LogoutOutlined, MessageOutlined, NotificationOutlined, OpenAIOutlined, OrderedListOutlined, ProfileOutlined, SettingOutlined, UserOutlined } from "@ant-design/icons";
 import React from "react";
-import { useState } from 'react';
-import { calculateNewValue } from '@testing-library/user-event/dist/utils';
-import { MenuFoldOutlined, MenuUnfoldOutlined } from '@ant-design/icons';
-import Search from "antd/es/transfer/search";
-import Avatar from "antd/es/avatar/avatar";
+import { Flex, Avatar, Transfer } from "antd";
+import { MessageOutlined, NotificationOutlined, UserOutlined } from "@ant-design/icons";
+// import Search from "antd/es/transfer/search";
+// import Avatar from "antd/es/avatar/avatar";
+// const { Avatar } = Avatar;
+const { Search } = Transfer;
+
 const Headerbar = ()=>{
     return(
         
